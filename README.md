@@ -169,19 +169,6 @@ This file defines the Mongoose schema for the **Household** model. It represents
 
 This file defines the Mongoose schema for the **Payment** model. It represents the structure of a payment record, which includes fields like household ID, member ID, payment date, category, and amount. This model is used to store and retrieve payment data from the database.
 
-### 8\. `logs/`
-
-This folder contains log files that track activities and errors. It includes:
-
-*   `import-activity.log`: Logs for successful data imports.
-*   `import-errors.log`: Logs for any errors encountered during data imports.
-
-* * *
-
-License
--------
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 * * *
 
