@@ -30,8 +30,24 @@ plaintext
 
 Copy code
 
-`Family-Expense-Insights-Tracker │ ├── .gitignore                    # Specifies files and folders to be ignored by Git ├── financial_and_transaction_data.xlsx  # Excel file with family financial records ├── loadData.js                   # Script for loading financial data from the Excel file ├── package.json                  # Node.js project dependencies and scripts ├── index.js                      # Entry point for the Express application ├── README.md                     # Project documentation │ ├── logs                          # Folder containing application logs │   ├── import-activity.log       # Logs for successful data import activities │   └── import-errors.log         # Logs for errors encountered during data import │ └── models                        # Folder for Mongoose data models     ├── Household.js              # Mongoose schema for household information     └── Payment.js                # Mongoose schema for payment records`
-
+```
+Family-Expense-Insights-Tracker 
+│
+├── .gitignore                   # Specifies files and folders to be ignored by Git (e.g., node_modules, logs, etc.)
+├── financial_and_transaction_data.xlsx  # Excel file containing financial records (likely for import)
+├── loadData.js                  # Script that handles loading financial data from the Excel file into the system
+├── package.json                 # Node.js project dependencies, scripts, and metadata
+├── index.js                     # Main entry point for the Express application (likely starts the web server)
+├── README.md                    # Documentation describing the purpose and usage of the project
+│
+├── logs                          # Folder containing logs to track activities and errors
+│   ├── import-activity.log      # Logs of successful data imports (helps track when data was loaded)
+│   └── import-errors.log        # Logs of errors encountered during the import process (helps for troubleshooting)
+│
+└── models                        # Mongoose data models that define the database schema
+    ├── Household.js             # Mongoose schema for household information (e.g., members, budget details)
+    └── Payment.js               # Mongoose schema for payment records (e.g., expenses, transactions)
+```
 * * *
 
 Setup Instructions
