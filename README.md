@@ -26,9 +26,6 @@ Features
 Project Structure
 -----------------
 
-plaintext
-
-Copy code
 
 ```
 Family-Expense-Insights-Tracker 
@@ -65,9 +62,6 @@ Before you begin, ensure you have the following installed:
 
 Clone this repository to your local machine:
 
-bash
-
-Copy code
 
 `git clone <repo-url> cd Family-Expense-Insights-Tracker`
 
@@ -75,27 +69,17 @@ Copy code
 
 Run the following command to install the necessary packages:
 
-bash
-
-Copy code
-
 `npm install`
 
 ### 3\. Configure environment variables
 
 Create a `.env` file at the root of the project and set the MongoDB URI for your database connection:
 
-plaintext
-
-Copy code
 
 `DATABASE_URI=<your-mongodb-uri>`
 
 Example of what this might look like for MongoDB Atlas:
 
-plaintext
-
-Copy code
 
 `DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/expense-tracker`
 
@@ -103,9 +87,6 @@ Copy code
 
 To run the application, use the following command:
 
-bash
-
-Copy code
 
 `npm start`
 
@@ -122,9 +103,6 @@ To import data from the Excel file, use the `loadData.js` script. This will read
 
 Run the following command:
 
-bash
-
-Copy code
 
 `node loadData.js`
 
@@ -141,9 +119,6 @@ Add a new payment record to the database.
 
 **Request Body:**
 
-json
-
-Copy code
 
 `{   "householdId": "123",   "memberId": "456",   "paymentDate": "2024-11-25T00:00:00Z",   "category": "Groceries",   "amount": 200 }`
 
