@@ -58,69 +58,67 @@ Before you begin, ensure you have the following installed:
 *   **MongoDB** (either locally or through a cloud provider like MongoDB Atlas)
 *   **Excel file with family transaction data** (`financial_and_transaction_data.xlsx`)
 
-### 1\. Clone the repository
+1. **Clone the Repository:**
+    ```bash
+    git clone <repo-url>
+    ```
+2. **Navigate to the Project Directory:**
+    ```bash
+    cd Family-Expense-Insights-Tracker
+    ```
+3. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+4. **Configure Environment Variables:**
+    - Create a `.env` file at the root of the project.
+    - Set the MongoDB URI for your database connection:
+    ```bash
+    DATABASE_URI=<your-mongodb-uri>
+    ```
+    Example for MongoDB Atlas:
+    ```bash
+    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/expense-tracker
+    ```
 
-Clone this repository to your local machine:
+5. **Start the Server:**
+    ```bash
+    npm start
+    ```
+    The application should now be running on [http://localhost:3000](http://localhost:3000).
 
+---
 
-`git clone <repo-url> cd Family-Expense-Insights-Tracker`
-
-### 2\. Install dependencies
-
-Run the following command to install the necessary packages:
-
-`npm install`
-
-### 3\. Configure environment variables
-
-Create a `.env` file at the root of the project and set the MongoDB URI for your database connection:
-
-
-`DATABASE_URI=<your-mongodb-uri>`
-
-Example of what this might look like for MongoDB Atlas:
-
-
-`DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/expense-tracker`
-
-### 4\. Start the server
-
-To run the application, use the following command:
-
-
-`npm start`
-
-The application should now be running on **http://localhost:3000**.
-
-* * *
-
-Usage
------
+## Usage
 
 ### Importing Data from Excel
 
 To import data from the Excel file, use the `loadData.js` script. This will read the data from `financial_and_transaction_data.xlsx` and store it in the MongoDB database.
 
 Run the following command:
-
-
-`node loadData.js`
+```bash
+node loadData.js
+```
 
 The script will process the data and store it in the `Household` and `Payment` collections of the MongoDB database. Logs for activities and errors will be saved in the `logs/` folder.
 
 * * *
 
-API Endpoints
--------------
+## API Endpoints
 
 ### `POST /api/payments`
-
 Add a new payment record to the database.
 
 **Request Body:**
-
-
-`{   "householdId": "123",   "memberId": "456",   "paymentDate": "2024-11-25T00:00:00Z",   "category": "Groceries",   "amount": 200 }`
+```json
+{   
+    "householdId": "123",   
+    "memberId": "456",   
+    "paymentDate": "2024-11-25T00:00:00Z",   
+    "category": "Groceries",   
+    "amount": 200 
+}
+```
 
 **Response:**
 
